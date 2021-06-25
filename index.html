@@ -1,133 +1,155 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title>bootstrap기반</title>
+		<!-- bootrap >download> Compiled CSS and JS> download > 여기서는 그리드만 가져와서 쓸거임 -->
+		<link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<!--제이쿼리 가져오기 https://code.jquery.com/ >minified 주소복사 -->
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="js/main.js"></script>
+		<!-- waypoints 다운받아 경로지정 -->
+		<!-- <script src="js/jquery.waypoints.min.js"></script> -->
+		<script src="js/ScrollTrigger.min.js"></script>
+	</head>
 
-<head>
-  <meta charset="utf-8">
-  <title>bootstrap기반</title>
-  <!-- bootrap >download> Compiled CSS and JS> download > 여기서는 그리드만 가져와서 쓸거임 -->
-  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <!--제이쿼리 가져오기 https://code.jquery.com/ >minified 주소복사 -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="js/main.js"></script>
-  <!-- waypoints 다운받아 경로지정 -->
-  <!-- <script src="js/jquery.waypoints.min.js"></script> -->
-  <script src="js/ScrollTrigger.min.js"></script>
-</head>
+	<body>
+		<!-- 1.container 필요한요소 파악하기 -->
 
-<body>
-  <!-- 1.container 필요한요소 파악하기 -->
+		<header>
+			<h1 class="logo">
+				<a href=""><em>Pure</em> cloudHost</a>
+			</h1>
+		</header>
+		<!-- Header -->
 
-  <header>
-    <h1 class="logo"><a href=""><em>Pure</em> cloudHost</a></h1>
+		<section class="slogan">
+			<!-- 배경색을 다쓰는게 있으므로 자식으로 container를 줘야한다 -->
+			<div class="container">
+				<!-- 부트스트랩에서 grid는 아래 row 클래스에서 해준다 -->
+				<div class="row">
+					<!-- medium크기의 그리드 6개가 두개 -->
+					<div class="col-md-6">
+						<img src="images/server_img.png" alt="" />
+					</div>
+					<div class="col-md-6">
+						<h2>Free SSD Cloud Hosting</h2>
+						<p>
+							This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+							velit auctor alique
+						</p>
+						<a href="">Give me that free stuff</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- slogan -->
 
-  </header> <!-- Header -->
+		<section class="testimonial">
+			<h2 class="hidden">testimonial</h2>
+			<!-- 인용문 -->
+			<blockquote cite="http://">
+				<p>
+					This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+					velit auctor aliquet.
+				</p>
+				<small>- alikerock</small>
+			</blockquote>
+		</section>
+		<!-- testimonial -->
 
-  <section class="slogan">
-    <!-- 배경색을 다쓰는게 있으므로 자식으로 container를 줘야한다 -->
-    <div class="container">
-      <!-- 부트스트랩에서 grid는 아래 row 클래스에서 해준다 -->
-      <div class="row">
-        <!-- medium크기의 그리드 6개가 두개 -->
-        <div class="col-md-6">
-          <img src="images/server_img.png" alt="">
-        </div>
-        <div class="col-md-6">
-          <h2>Free SSD Cloud Hosting</h2>
-          <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor alique </p>
-          <a href="">Give me that free stuff</a>
-        </div>
-      </div>
-    </div>
-  </section> <!-- slogan -->
+		<!-- 배경색이 그냥 흰색으로 쓰는게 없기 때문에 그냥 부모에 컨테이너 준다 -->
+		<section class="device container" data-scroll>
+			<!-- 여기선 왼쪽이 4컬럼쓰고 오른쪽이 7컬럼쓰고 맨왼쪽에 한 컬럼 남는 부트스트랩 이용 -->
+			<div class="row">
+				<div class="col-md-4 offset-md-1">
+					<h3>Control from Any Device</h3>
+					<p>
+						This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+						velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
+						auctor nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+						vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
+						nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris
+						vitae erat consequat auctor eu in elit. Class
+					</p>
+				</div>
 
-  <section class="testimonial">
-    <h2 class="hidden">testimonial</h2>
-    <!-- 인용문 -->
-    <blockquote cite="http://">
-      <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-      </p>
-      <small>- alikerock</small>
-    </blockquote>
-  </section> <!-- testimonial -->
+				<div class="col-md-7 appliance">
+					<img src="images/monitor.png" alt="monitor" id="monitor" />
+					<img src="images/phone.png" alt="phone" id="phone" />
+				</div>
+			</div>
+		</section>
+		<!-- device -->
+		<!-- 애니메이션 쓸곳에 data-scroll 넣어주기 -->
+		<section class="features" data-scroll>
+			<!-- 화면에 없는건데 웹표준 html에 통과하기 위해서-->
+			<h2 class="hidden">features</h2>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 item">
+						<img src="images/feature_icon_speed.png" alt="speed" />
+						<h4>speed</h4>
+					</div>
+					<div class="col-md-4 item">
+						<img src="images/feature_icon_support.png" alt="support" />
+						<h4>support</h4>
+					</div>
+					<div class="col-md-4 item">
+						<img src="images/feature_icon_smart.png" alt="smart" />
+						<h4>smart</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- features -->
 
-  <!-- 배경색이 그냥 흰색으로 쓰는게 없기 때문에 그냥 부모에 컨테이너 준다 -->
-  <section class="device container" data-scroll>
-    <!-- 여기선 왼쪽이 4컬럼쓰고 오른쪽이 7컬럼쓰고 맨왼쪽에 한 컬럼 남는 부트스트랩 이용 -->
-    <div class="row">
-      <div class="col-md-4 offset-md-1">
-        <h3>Control from Any Device</h3>
-        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor
-           nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class
-      </div>
-      <div class="col-md-7 appliance">
-        <img src="images/monitor.png" alt="monitor" id="monitor">
-        <img src="images/phone.png" alt="phone" id="phone">
-      </div>
-    </div>
-  </section> <!-- device -->
-                            <!-- 애니메이션 쓸곳에 data-scroll 넣어주기 -->
-  <section class="features" data-scroll>
+		<section class="location" data-scroll>
+			<!-- 줄무늬별로 나오는 애니메이션 효과를 위해 따로 다 만들어준다 -->
+			<div class="striptes">
+				<!-- .striptes[id = "s$"]*12 -->
+				<div class="stripte" id="s1"></div>
+				<div class="stripte" id="s2"></div>
+				<div class="stripte" id="s3"></div>
+				<div class="stripte" id="s4"></div>
+				<div class="stripte" id="s5"></div>
+				<div class="stripte" id="s6"></div>
+				<div class="stripte" id="s7"></div>
+				<div class="stripte" id="s8"></div>
+				<div class="stripte" id="s9"></div>
+				<div class="stripte" id="s10"></div>
+			</div>
+			<!-- container가 하는 일은 너비를 잡아주고 화면 가운데 있어라 이거 하나뿐이라 -->
+			<!-- 별도의 효과를 추가하기 위해 contents를 넣어준다 -->
+			<div class="container contents">
+				<div class="row">
+					<div class="col-md-6 map">
+						<img src="images/location_map.png" alt="" id="location_map" />
+						<img
+							src="images/location_radar.png"
+							alt="location_rader"
+							id="rader"
+						/>
+					</div>
+					<div class="col-md-6">
+						<h2>Over 50 server locations</h2>
+						<p>
+							This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+							velit auctor aliquet.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- location -->
 
-    <!-- 화면에 없는건데 웹표준 html에 통과하기 위해서-->
-    <h2 class="hidden">features</h2>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 item">
-          <img src="images/feature_icon_speed.png" alt="speed">
-          <h4>speed</h4>
-        </div>
-        <div class="col-md-4 item">
-          <img src="images/feature_icon_support.png" alt="support">
-          <h4>support</h4>
-        </div>
-        <div class="col-md-4 item">
-          <img src="images/feature_icon_smart.png" alt="smart">
-          <h4>smart</h4>
-        </div>
-      </div>
-    </div>
-  </section> <!-- features -->
-
-  <section class="location" data-scroll>
-    <!-- 줄무늬별로 나오는 애니메이션 효과를 위해 따로 다 만들어준다 -->
-    <div class="striptes">
-      <!-- .striptes[id = "s$"]*12 -->
-      <div class="stripte" id="s1"></div>
-      <div class="stripte" id="s2"></div>
-      <div class="stripte" id="s3"></div>
-      <div class="stripte" id="s4"></div>
-      <div class="stripte" id="s5"></div>
-      <div class="stripte" id="s6"></div>
-      <div class="stripte" id="s7"></div>
-      <div class="stripte" id="s8"></div>
-      <div class="stripte" id="s9"></div>
-      <div class="stripte" id="s10"></div>
-
-
-    </div>
-    <!-- container가 하는 일은 너비를 잡아주고 화면 가운데 있어라 이거 하나뿐이라 -->
-    <!-- 별도의 효과를 추가하기 위해 contents를 넣어준다 -->
-    <div class="container contents">
-      <div class="row">
-        <div class="col-md-6 map">
-          <img src="images/location_map.png" alt="" id="location_map">
-          <img src="images/location_radar.png" alt="location_rader" id="rader">
-        </div>
-        <div class="col-md-6">
-          <h2>Over 50 server locations</h2>
-          <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. </p>
-        </div>
-      </div>
-    </div>
-  </section><!-- location -->
-
-
-    <!-- scroll -->
-    <!-- scroll -->
-    <!-- scroll -->
-  <div class="output">output</div>
-<!-- <script type="text/javascript">
+		<!-- scroll -->
+		<!-- scroll -->
+		<!-- scroll -->
+		<div class="output">output</div>
+		<div class="output">output</div>
+		<!-- <script type="text/javascript">
   // scroll
   // scroll
   // scroll
@@ -158,8 +180,5 @@
   });
 
 </script> -->
-
-
-</body>
-
+	</body>
 </html>
